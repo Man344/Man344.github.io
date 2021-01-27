@@ -6,7 +6,7 @@ $(".menu-toggle").on('click', function() {
   $('.logoTopName').toggle();
 
 });
-
+//Animation lors du click des li a
 $("nav ul").on('click', function(){
   $(this).toggleClass('hidden');
   $('.menu-section').toggleClass("on");
