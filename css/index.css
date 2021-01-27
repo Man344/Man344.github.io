@@ -91,10 +91,12 @@ header{
     position: absolute;
   }
 
-  .logoTop{
-    margin: 2% 2%;
-    font-family: Georgia, serif;
-    text-align: center;
-  }
 
+
+}
+
+.logoTop{
+  margin: 2% 2%;
+  font-family: Georgia, serif;
+  text-align: center;
 }
