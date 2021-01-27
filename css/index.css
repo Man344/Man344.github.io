@@ -90,10 +90,10 @@ header{
     background-color: rgb(0,0,0,0.4);
     position: absolute;
   }
-}
-
-.logoTop{
-  margin: 2% 2%;
-  font-family: Georgia, serif;
-  text-align: center;
+  .logoTop{
+    margin: 2% 2%;
+    font-family: Georgia, serif;
+    justify-content: center;
+    float: left;
+  }
 }
