@@ -27,7 +27,7 @@ header{
   font-size: 1em;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
   .limiter.on{
     display: none;
   }
@@ -111,7 +111,7 @@ header{
 }
 
 
-@media screen and (min-width:481px) {
+@media screen and (min-width:769px) {
   .logoTop{
     text-align: center;
     float: left;
