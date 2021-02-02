@@ -12,10 +12,10 @@ $("nav ul").on('click', function(){
   $('.menu-section').toggleClass("on");
   $(".menu-toggle").toggleClass('on');
   $('.logoTopName').toggle();
-})
+});
 
 //Soulignage de l'onglet actif
 $("[class*=nav-link]").on('click',function(){
   $('.nav-link.active').toggleClass('active');
   $(this).toggleClass('active');
-})
+});
