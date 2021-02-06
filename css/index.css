@@ -1,6 +1,7 @@
 
 html{
   height: 100%;
+  font-family: Comic sans-serif;
 }
 body {
   top: 0;
@@ -158,10 +159,6 @@ section{
     display: flex;
   }
   .nav-link.active, .nav-link{
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
     float: left;
     color: black;
     text-align: center;
@@ -169,7 +166,6 @@ section{
     text-decoration: none;
     font-size: 1.3em;
     position: relative;
-    transition: transform 0.8s;
   }
   .nav-link.active::after, .nav-link::after{
   content: '';

@@ -15,7 +15,7 @@ $("nav ul").on('click', function(){
 });
 
 //Soulignage de l'onglet actif
-$("[class*=nav-link]").on('click',function(){
-  $('.nav-link.active').toggleClass('active');
-  $(this).toggleClass('active');
-});
+// $("[class*=nav-link]").on('click',function(){
+//   $('.nav-link.active').toggleClass('active');
+//   $(this).toggleClass('active');
+// });
