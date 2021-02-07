@@ -151,10 +151,12 @@ img#DevWeb, img#DevOps, #PhotoTop{
   }
   /* //////CONTENT////// */
   img#DevWeb{
-    max-width: 55%;
+    width: 55%;
+    min-width: 15em;
   }
   img#DevOps{
-    max-width: 55%;
+    width: 55%;
+    min-width: 15em;
   }
   #PhotoTop{
     display: none;
