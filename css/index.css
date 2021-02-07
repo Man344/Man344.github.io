@@ -36,6 +36,8 @@ section{
 .title{
   text-align: center;
   color: rgba(62, 87, 145,0.7);
+  margin-left: 3%;
+  margin-right: 3%;
 }
 .main-content-row{
   text-align: center;
@@ -47,7 +49,15 @@ section{
   text-align: center;
   background: rgba(62, 87, 145,0.7);
 }
-
+.main-row.top{
+  padding: 3em 3em;
+}
+.content-row.top, .title.top{
+  display: flex;
+}
+img#DevWeb, img#DevOps, #PhotoTop{
+  height: auto;
+}
 
 /* //////////////////////////////////Version Mobile/////////////////////////// */
 
@@ -139,6 +149,23 @@ section{
     margin: 1.5em 1.5em;
     padding: 2em 2.5em;
   }
+  /* //////CONTENT////// */
+  img#DevWeb{
+    max-width: 55%;
+  }
+  img#DevOps{
+    max-width: 55%;
+  }
+  #PhotoTop{
+    display: none;
+  }
+  .content-row.top{
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-row.top{
+    margin: 1.5em 1.5em;
+  }
 }
 
 /* /////////////////////////Version PC//////////////////////////// */
@@ -194,6 +221,31 @@ section{
   }
   .main-row{
     margin: 4em 6em;
-    padding: 6em 9em;
+    padding: 3em 9em;
+  }
+  h1{
+    font-size: 2.5em;
+  }
+  /* /////Content////// */
+  img#DevWeb{
+    max-width: 33%;
+  }
+  img#DevOps{
+    max-width: 33%;
+  }
+  #PhotoTop{
+    max-width: 40%;
+    clip-path:ellipse(50% 50%);
+  }
+  .content-row.top{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main-row.top{
+    margin: 4em 6em;
+  }
+  .title.top{
+    flex-direction: column;
+    align-items: center;
   }
 }
