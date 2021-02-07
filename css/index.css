@@ -55,8 +55,27 @@ section{
 .content-row.top, .title.top{
   display: flex;
 }
-img#DevWeb, img#DevOps, #PhotoTop{
+img#DevWeb, img#DevOps, img#PhotoTop, img#PhotoBis{
   height: auto;
+}
+.content-row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.linkComp{
+  padding: 3% 3%;
+  margin:2% 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(62, 87, 145,0.7);
+  border-radius: 3em;
+}
+.linkComp:hover{
+  transition: 0.3s;
+  background: rgba(62, 87, 145,0.5);
+  text-decoration: underline;
 }
 
 /* //////////////////////////////////Version Mobile/////////////////////////// */
@@ -158,8 +177,13 @@ img#DevWeb, img#DevOps, #PhotoTop{
     width: 55%;
     min-width: 15em;
   }
-  #PhotoTop{
+  img#PhotoTop{
     display: none;
+  }
+  img#PhotoBis{
+    max-width: 20%;
+    min-width: 7em;
+    clip-path:ellipse(50% 50%);
   }
   .content-row.top{
     flex-direction: column;
@@ -238,6 +262,9 @@ img#DevWeb, img#DevOps, #PhotoTop{
   #PhotoTop{
     max-width: 40%;
     clip-path:ellipse(50% 50%);
+  }
+  #PhotoBis{
+    display: none;
   }
   .content-row.top{
     flex-direction: row;
