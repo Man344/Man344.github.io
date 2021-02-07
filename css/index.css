@@ -77,6 +77,15 @@ img#DevWeb, img#DevOps, img#PhotoTop, img#PhotoBis{
   background: rgba(62, 87, 145,0.5);
   text-decoration: underline;
 }
+.EPSI, .BAC{
+  background: white;
+  border-radius: 3em;
+  margin: 3% 3%;
+  padding: 4% 2%;
+}
+span{
+  text-decoration: underline;
+}
 
 /* //////////////////////////////////Version Mobile/////////////////////////// */
 
@@ -192,6 +201,10 @@ img#DevWeb, img#DevOps, img#PhotoTop, img#PhotoBis{
   .main-row.top{
     margin: 1.5em 1.5em;
   }
+  .main-content-row.formations{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* /////////////////////////Version PC//////////////////////////// */
@@ -276,5 +289,10 @@ img#DevWeb, img#DevOps, img#PhotoTop, img#PhotoBis{
   .title.top{
     flex-direction: column;
     align-items: center;
+  }
+  .main-content-row.formations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
