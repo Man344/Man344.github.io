@@ -6,7 +6,6 @@ let myChart = new Chart(myFirstChart, {
 
         datasets: [{
             data: [8, 6, 7, 5, 6, 3, 1],
-            label : "COUCU",
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
