@@ -1,0 +1,11 @@
+
+.main-content-row > img{
+  display: block;
+  float: left;
+  margin-right: 6%;
+  margin-bottom: 6%;
+}
+
+.main-content-row > p{
+  display: block;
+}
