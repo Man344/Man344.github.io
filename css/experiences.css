@@ -1,19 +1,32 @@
-
-.main-content-row > img{
-  display: block;
-  float: left;
-  margin-right: 6%;
-  margin-bottom: 6%;
+#PCP,#EPSI,#MDC,#HD{
+  height: auto;
 }
 
-.main-content-row > p{
-  display: block;
+@media screen and (min-width:920px){
+  #PCP,#EPSI,#MDC,#HD{
+    display: block;
+    float: left;
+    margin-right: 6%;
+    margin-bottom: 6%;
+    width: 100%;
+    max-width: 18em;
+  }
+  .main-content-row > p{
+    display: block;
+  }
 }
-h1{
-  font-size: 2.5em;
-}
-
 @media screen and (max-width:920px){
-
-
+  .main-content-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #PCP,#EPSI,#MDC,#HD{
+    margin-bottom: 6%;
+    width: 100%;
+    max-width: 16em;
+  }
+  h2{
+    font-size: 1em;
+  }
 }
