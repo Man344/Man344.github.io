@@ -9,3 +9,11 @@
 .main-content-row > p{
   display: block;
 }
+h1{
+  font-size: 2.5em;
+}
+
+@media screen and (max-width:920px){
+
+
+}
