@@ -1,5 +1,6 @@
 #PCP,#EPSI,#MDC,#HD{
   height: auto;
+  border: 1px solid black;
 }
 .main-content-row{
   font-size: 1.2em;
