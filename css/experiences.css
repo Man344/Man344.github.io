@@ -4,6 +4,9 @@
 .main-content-row{
   font-size: 1.2em;
 }
+h2{
+  font-style: italic;
+}
 /* ///////////////////////VERSION PC//////////////////// */
 @media screen and (min-width:920px){
   #PCP,#EPSI,#MDC,#HD{
