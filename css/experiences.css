@@ -1,7 +1,10 @@
 #PCP,#EPSI,#MDC,#HD{
   height: auto;
 }
-
+.main-content-row{
+  font-size: 1.2em;
+}
+/* ///////////////////////VERSION PC//////////////////// */
 @media screen and (min-width:920px){
   #PCP,#EPSI,#MDC,#HD{
     display: block;
@@ -15,6 +18,7 @@
     display: block;
   }
 }
+/* //////////////////////VERSION MOBILE/////////////////// */
 @media screen and (max-width:920px){
   .main-content-row{
     display: flex;
