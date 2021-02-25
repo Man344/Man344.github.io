@@ -23,41 +23,17 @@
   transition: 0.5s;
   font-style: italic;
 }
-
+span{
+  text-decoration: none;
+}
+.content-row{
+  display: contents;
+}
 @media screen and (max-width:920px){
-  .map-responsive{
-    display: none;
-  }
-  .main-content-row{
-    min-width: 100%;
-  }
   .phone-Row > a, .mail-Row > a{
     min-width: 60%;
   }
-  .pouce img{
-    border-radius: 2em;
-    border: 1px solid rgba(62, 87, 145,0.7);
-  }
 }
 @media screen and (min-width:920.1px) {
-  .map-responsive{
-    position: relative;
-    overflow:hidden;
-    padding-bottom:56.25%;
-    height:0;
-  }
-  .map-responsive iframe{
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    border:1px solid rgba(62, 87, 145,0.7);
-  }
-  .content-row{
-    display: contents;
-  }
-  .pouce{
-    display: none;
-  }
+
 }
