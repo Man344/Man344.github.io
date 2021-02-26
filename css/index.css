@@ -1,6 +1,6 @@
 html{
   height: 100%;
-  font-family: Comic sans-serif;
+  font-family:Courier, monospace;
 }
 body {
   top: 0;
@@ -24,7 +24,7 @@ section{
 }
 .logoTop{
   margin: 1% 2%;
-  font-family: Comic sans-serif;
+  font-family: Courier, monospace;
   font-size: 1.3em;
 }
 .main-row{
@@ -128,7 +128,7 @@ span{
   nav ul {
     margin: 0;
     padding: 0;
-    font-family: Comic sans-serif;
+    font-family: Courier, monospace;
     list-style: none;
     margin: 4em auto;
     text-align: center;
@@ -218,7 +218,7 @@ span{
     float: right;
     margin: 0;
     padding: 0;
-    font-family: Comic sans-serif;
+    font-family: Courier, monospace;
     list-style: none;
     margin: 3em 5% 0 0;
     display: flex;
