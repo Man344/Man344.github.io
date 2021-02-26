@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     host: 'man344',
     commands:[
     "Hi recruiters !",
-    {"input": "cat helloRectruiter.js", "output":[ "I would be happy to join your company"]},
+    {"input": "node helloRectruiter.js", "output":[ "I would be happy to join your company"]},
   ]
   });
 });
