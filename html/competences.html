@@ -4,16 +4,16 @@
     <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport">
     <script src="https://kit.fontawesome.com/afe112ef57.js" crossorigin="anonymous"></script>
     <title>Acceuil | Mathis ALLEN</title>
+    <meta name="description" content="Decouvrez les compétences DevOps de Mathis ALLEN, étudiant en deuxième année à l'EPSI (école privée des sciences informatiques) Montpellier">
     <link rel="shortcut icon" type="icon" href="../images/favicon.ico" />
   </head>
   <body>
-
 <header>
   <section class="nav-bar-row">
     <div class="menu-section">
       <div class="logoTop">
         <i class="fas fa-laptop-code fa-4x"></i>
-        <p>Mathis ALLEN</p>
+        <p id="titleName">Mathis ALLEN</p>
       </div>
       <div class="menu-toggle">
         <div class="one"></div>
@@ -35,7 +35,7 @@
   <div class="main-row">
     <div class="content-row">
         <div class="title">
-          <h1>Compétences Dev :</h1>
+          <h1 id="title_competences_Dev">Compétences Dev :</h1>
         </div>
         <div class="main-content-row">
           <canvas id="myChartDev" width="350" height="350" ></canvas>
@@ -45,7 +45,7 @@
     <div class="main-row">
       <div class="content-row">
           <div class="title">
-            <h1>Compétences Ops :</h1>
+            <h1 id="title_competences_Ops">Compétences Ops :</h1>
           </div>
           <div class="main-content-row">
             <canvas id="myChartOps" width="350" height="350" ></canvas>
@@ -55,7 +55,7 @@
   <div class="main-row">
     <div class="content-row">
         <div class="title">
-          <h1>Compétences BDD :</h1>
+          <h1 id="title_competences_BDD">Compétences BDD :</h1>
         </div>
         <div class="main-content-row">
           <canvas id="myChartBdd" width="350" height="350" ></canvas>
@@ -65,7 +65,7 @@
 <div class="main-row">
   <div class="content-row">
       <div class="title">
-        <h1>Autres :</h1>
+        <h1 id="title_autres_competences">Autres :</h1>
       </div>
       <div class="main-content-row">
         <canvas id="myChartOther" width="350" height="350" ></canvas>
@@ -74,9 +74,8 @@
 </div>
 </section>
 <section class="footer">
-  <p>&copy 2021 ALLEN Mathis</p>
+  <p id="Copyright ALLEN Mathis">&copy 2021 ALLEN Mathis</p>
 </section>
-
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
@@ -84,5 +83,4 @@
   <link rel="stylesheet" href="../css/competences.css">
   <script src="../js/index.js" charset="utf-8"></script>
   <script src="../js/competences.js" charset="utf-8"></script>
-
 </html>
