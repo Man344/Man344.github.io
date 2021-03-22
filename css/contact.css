@@ -33,6 +33,12 @@ span{
 .content-row{
   display: contents;
 }
+.fa-linkedin:hover, .fa-linkedin:active{
+  opacity: 0.7;
+}
+.fa-linkedin{
+  opacity: 1;
+}
 @media screen and (max-width:920px){
   .phone-Row > a, .mail-Row > a{
     min-width: 60%;
