@@ -5,7 +5,7 @@ let myChartDev = new Chart(devChart, {
     data: {
 
         datasets: [{
-            data: [8, 6, 7, 5, 6, 3, 1,8],
+            data: [9, 9, 6, 6, 7, 5, 3,6, 6],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -28,8 +28,8 @@ let myChartDev = new Chart(devChart, {
             ],
             borderWidth: 1
         }],
-        labels: ['PHP (Symfony)', 'Javascript', 'C# (Entity Framework)'
-        , 'Dart (Flutter)', 'Scala (Play)', 'C', 'JAVA','HTML5/CSS3'],
+        labels: ['JAVA', 'Spring', 'Quarkus', 'Jpa','C# (Entity Framework)'
+        , 'Dart (Flutter)', 'C', 'HTML5/CSS3', 'JS'],
     },
 });
 
@@ -39,7 +39,7 @@ let myChartOps = new Chart(opsChart, {
   type: 'doughnut',
   data: {
     datasets: [{
-      data: [6, 7, 5, 5, 5, 4, 4],
+      data: [6, 7, 7, 6,6, 4],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -60,8 +60,7 @@ let myChartOps = new Chart(opsChart, {
       ],
       borderWidth: 1
     }],
-    labels: ['Commandes Linux', 'Firewall (Iptables)', 'Docker'
-    , 'Jenkins', 'Shell', 'DHCP','DNS']
+    labels: ['Docker', 'Gitlab CI', 'K8S', 'IIS', 'Commandes linux', 'Shell']
   },
 });
 
@@ -71,7 +70,7 @@ let myChartBdd = new Chart(bddChart, {
   type: 'doughnut',
   data: {
     datasets: [{
-      data: [8, 8, 5, 6,7],
+      data: [8, 8, 8, 8],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -89,7 +88,7 @@ let myChartBdd = new Chart(bddChart, {
       borderWidth: 1,
     }],
     labels: ['SQL', 'MySQL', 'SQLServer'
-    , 'Modélisation (Merise)','phpMyAdmin']
+    , 'Modélisation (Merise)']
   },
 });
 
@@ -98,7 +97,7 @@ let myChartOther = new Chart(otherChart,{
   type: 'doughnut',
   data: {
     datasets: [{
-      data: [8, 7, 7, 6, 5, 5],
+      data: [6, 6, 6, 6, 6, 6],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -117,7 +116,7 @@ let myChartOther = new Chart(otherChart,{
       ],
       borderWidth: 1,
     }],
-    labels: ['POO', 'Git', 'Anglais (Operationnel)'
-    , 'Algorithmique','UML', 'planification de projet (gantt)']
+    labels: ['nmap', 'nikto', 'hydra'
+    , 'Owasp','redirection SSH', 'Burp']
   },
 });
