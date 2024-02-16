@@ -5,7 +5,7 @@ let myChartDev = new Chart(devChart, {
     data: {
 
         datasets: [{
-            data: [9, 9, 6, 6, 7, 5, 3,6, 6],
+            data: [9,7, 7, 6, 7, 7, 6],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -28,8 +28,8 @@ let myChartDev = new Chart(devChart, {
             ],
             borderWidth: 1
         }],
-        labels: ['JAVA', 'Spring', 'Quarkus', 'Jpa','C# (Entity Framework)'
-        , 'Dart (Flutter)', 'C', 'HTML5/CSS3', 'JS'],
+        labels: ['JAVA (Spring/Quarkus)', 'C# (Entity Framework)'
+        , 'Dart (Flutter)', 'Python', 'HTML5/CSS3', 'JS', 'TS (Angular)'],
     },
 });
 
