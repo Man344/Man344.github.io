@@ -97,13 +97,14 @@ let myChartOther = new Chart(otherChart,{
   type: 'doughnut',
   data: {
     datasets: [{
-      data: [6, 6, 6, 6, 6, 6],
+      data: [6, 6, 6, 6, 6, 6,6],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
         'rgba(255, 206, 86, 0.2)',
         'rgba(75, 192, 192, 0.2)',
         'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
         'rgba(0, 255, 0,0.2)'
       ],
       borderColor: [
@@ -112,11 +113,12 @@ let myChartOther = new Chart(otherChart,{
         'rgba(255, 206, 86, 1)',
         'rgba(75, 192, 192, 1)',
         'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
         'rgba(0, 255, 0, 1)'
       ],
       borderWidth: 1,
     }],
     labels: ['nmap', 'nikto', 'hydra'
-    , 'Owasp','redirection SSH', 'Burp']
+    , 'Owasp','redirection SSH', 'Burp', 'Metasploit']
   },
 });
