@@ -76,7 +76,7 @@ img#DevWeb, img#DevOps, img#PhotoTop, img#PhotoBis{
   background: rgba(62, 87, 145,0.5);
   text-decoration: underline;
 }
-.EPSI, .BAC{
+.EPSI, .BAC, .CAP, .CAPen{
   background: white;
   border-radius: 3em;
   margin: 3% 3%;
