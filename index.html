@@ -1,113 +1,289 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport">
-    <script src="https://kit.fontawesome.com/afe112ef57.js" crossorigin="anonymous"></script>
-    <title>Accueil | Mathis ALLEN, Découvrez le profil de Mathis ALLEN, consultant en cyber sécurité</title>
-    <meta name="description" content="Decouvrez le profil de Mathis ALLEN,  Découvrez le profil de Mathis ALLEN, consultant en cyber sécurité">
-    <link rel="shortcut icon" type="icon" href="images/favicon.ico" />
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathis Allen - Vulnerability Intelligence Analyst</title>
+  <meta name="description" content="Mathis Allen - Vulnerability Intelligence Analyst at Orange Cyberdefense CERT, Montréal. AppSec practitioner and full-stack developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,600;1,400;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<header>
-  <section class="nav-bar-row">
-    <div class="menu-section">
-      <div class="logoTop">
-        <i class="fas fa-laptop-code fa-4x"></i>
-        <p class="titleName">Mathis ALLEN</p>
+  <nav>
+    <a href="#" class="nav-logo">mathis<em>.</em>allen</a>
+    <ul class="nav-links">
+      <li><a href="#skills">Expertise</a></li>
+      <li><a href="#exp">Experience</a></li>
+      <li><a href="#certs">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="nav-loc">Montréal, QC</span>
+  </nav>
+
+  <div id="hero">
+    <div class="hero-main">
+
+      <div class="hero-left fade">
+        <div>
+          <div class="role">Vulnerability Intelligence Analyst · Cybersecurity Engineer</div>
+          <h1>Vulnerability<br><em>Intelligence Analyst</em></h1>
+          <p class="hero-desc">
+            Full-stack developer background in cybersecurity - IAM, authorization systems,
+            vulnerability management. Moved to Montréal to go deeper into security.
+            Now focused on vulnerability intelligence at Orange Cyberdefense CERT.
+          </p>
+          <div class="cta-row">
+            <a href="mailto:mathis.allen.pro@gmail.com" class="btn-fill">mathis.allen.pro@gmail.com</a>
+          </div>
+        </div>
       </div>
-      <div class="menu-toggle">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
+
+      <div class="hero-right fade">
+        <div class="hero-photo-wrap">
+          <img src="pictures/image.png" alt="Mathis Allen" class="hero-photo">
+        </div>
+        <div>
+          <div class="sidebar-label">About</div>
+          <p class="sidebar-bio">
+            Developer by training, security engineer by choice. Left France, landed in Montréal.
+            Working at Orange Cyberdefense CERT on vulnerability intelligence - research,
+            analysis, advisories, tooling.
+          </p>
+        </div>
+        <div class="kv-list">
+          <div class="kv"><span class="kv-k">Location</span><span class="kv-v">Montréal, QC</span></div>
+          <div class="kv"><span class="kv-k">Company</span><span class="kv-v">Orange Cyberdefense</span></div>
+          <div class="kv"><span class="kv-k">Role</span><span class="kv-v">Vuln. Intelligence Analyst</span></div>
+        </div>
       </div>
-      <nav class="nav">
-		      <ul role="navigation" class="hidden">
-			         <li><a class="nav-link active" href="index.html">Présentation</a></li>
-			         <li><a class="nav-link" href="html/competences.html">Compétences</a></li>
-			         <li><a class="nav-link" href="html/experiences.html">Expériences</a></li>
-               <li><a class="nav-link" href="html/contact.html">Contact</a></li>
-		      </ul>
-	    </nav>
+
+    </div>
+  </div>
+
+  <section class="w" id="skills">
+    <div class="sh fade">
+      <span class="sn">01</span>
+      <h2 class="st">Expertise</h2>
+      <div class="sl"></div>
+    </div>
+    <div class="sk-grid fade">
+      <div class="sk">
+        <div class="sk-cat">Vuln. Intelligence</div>
+        <div class="sk-name">Vulnerability Analysis</div>
+        <ul class="sk-list">
+          <li>CVE research &amp; triage</li>
+          <li>Advisory writing</li>
+          <li>CVSS scoring</li>
+          <li>CNA operations</li>
+        </ul>
+      </div>
+      <div class="sk">
+        <div class="sk-cat">AppSec</div>
+        <div class="sk-name">Application Security</div>
+        <ul class="sk-list">
+          <li>OWASP Top 10</li>
+          <li>Burp Suite</li>
+          <li>SAST / DAST</li>
+          <li>Bug Bounty</li>
+        </ul>
+      </div>
+      <div class="sk">
+        <div class="sk-cat">Engineering</div>
+        <div class="sk-name">DevSecOps &amp; Dev</div>
+        <ul class="sk-list">
+          <li>Java / Spring Boot</li>
+          <li>Python / Django</li>
+          <li>Vue / Angular</li>
+          <li>Kubernetes / Docker</li>
+          <li>CI/CD pipelines</li>
+        </ul>
+      </div>
+      <div class="sk">
+        <div class="sk-cat">Identity</div>
+        <div class="sk-name">IAM &amp; Access Control</div>
+        <ul class="sk-list">
+          <li>Permission models</li>
+          <li>Privilege management</li>
+          <li>Access rights analysis</li>
+        </ul>
+      </div>
     </div>
   </section>
-</header>
-<section class="content">
-  <div class="main-row top">
-    <div class="content-row top">
-          <img src="images/Cyber-Security-Tools.png" alt="web_technologies" id="DevWeb">
-          <div class="title top">
-            <h1>Consultant en cyber sécurité</h1>
-            <img src="images/photo_CV.jpg" alt="photo_ALLEN_Mathis" id="PhotoTop">
-          </div>
-          <img src="images/DevOps.png" alt="logo_DevOps" id="DevOps">
+
+  <section class="w" id="exp">
+    <div class="sh fade">
+      <span class="sn">02</span>
+      <h2 class="st">Experience</h2>
+      <div class="sl"></div>
     </div>
-  </div>
-  <div class="main-row">
-    <div class="content-row">
-        <div class="title">
-          <h1>Qui suis-je ?</h1>
+    <div class="exp-list">
+
+      <div class="exp fade">
+        <div class="el">
+          <div class="ed">Mar 2025 – now</div>
+          <span class="badge bcur">Current</span>
         </div>
-        <div class="main-content-row">
-          <p>Passionné de cyber sécurité, je recherche une opportunité me permettant de m’épanouir pleinement dans ce domaine.
-            Développeur de formation, j’ai cet atout de connaître particulièrement le monde du web et du DevOps. Pure “team player”, j’ai l’habitude de travailler en équipe, de par mes expériences,
-            ainsi que par cette profonde culture du collectif que m’a inculquée ma pratique de sports divers depuis toujours. Compétiteur, j’aime performer, me challenger, progresser, et donc apprendre.
-            Le monde de la cybersécurité étant un défi permanent, je m’y vois donc une place.
-            <br> J'espère que vous trouverez de l'intérêt dans mon profil et vous remercie de prendre le temps de le consulter. </p>
-        </div>
-        <img src="images/photo_CV.jpg" alt="photo_ALLEN_Mathis" id="PhotoBis">
-        <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/Man344/Man344.github.io/main/documents/CV-Mathis-ALLEN-VF-CYBER.pdf" class="linkComp">Mon CV</a>
-        <a href="html/competences.html" class="linkComp">Mes Compétences</a>
-    </div>
-  </div>
-  <div class="main-row">
-    <div class="content-row">
-        <div class="title">
-          <h1>Mes certifications</h1>
-        </div>
-        <div class="main-content-row formations">
-          <div class="CAP">
-            <i class="fas fa-graduation-cap fa-3x"></i>
-            <p><span>2024</span> : Obtention de la certification "Certified AppSec Practitioner" de The SecOps Group.</p>
-            <br>
-            <a class="linkComp" href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/Man344/Man344.github.io/main/documents/CAP.pdf">Certificat</a>
+        <div>
+          <div class="er">Orange Cyberdefense CERT - Paris, then Montréal</div>
+          <div class="et">Vulnerability Intelligence Analyst</div>
+          <div class="edesc">
+            Vulnerability research and in-depth analysis, writing of security advisories,
+            development of the internal CNA platform, and tooling to improve analysis velocity
+            and automation. Started as CDD in Paris (Mar–May 2025), transitioned to VIE in
+            Montréal (Jun 2025–present).
           </div>
-          <div class="CAPen">
-            <i class="fas fa-university fa-3x"></i>
-            <p><span>2025 (en cours)</span> : Préparation de la certification "Certified AppSec Pentester" et "Certified Network Security Practitioner" de The SecOps Group.</p>
+          <div class="chips">
+            <span class="chip">Vuln. intelligence</span>
+            <span class="chip">Advisory writing</span>
+            <span class="chip">CNA platform</span>
+            <span class="chip">Tooling / automation</span>
+            <span class="chip">VIE - Montréal</span>
           </div>
         </div>
-    </div>
-</div>
-    <div class="main-row">
-      <div class="content-row">
-          <div class="title">
-            <h1>Mes formations</h1>
-          </div>
-          <div class="main-content-row formations">
-            <div class="BAC">
-              <i class="fas fa-graduation-cap fa-3x"></i>
-              <p><span>2019</span> : Baccalauréat Scientifique spécialité ISN (Informatique et Science du Numérique). Lycée Jean Jaurès St Clément de Rivière.</p>
-            </div>
-            <div class="EPSI">
-              <i class="fas fa-university fa-3x"></i>
-              <p><span>2019 - 2022</span> : Obtention du bachelor Concepteur Développeur d'Applications au sein de l'EPSI Montpellier.</p>
-            </div>
-            <div class="EPSI">
-              <i class="fas fa-university fa-3x"></i>
-              <p><span>2022 - 2024</span> : Obtention du titre EISI (Expert en Informatique et Systèmes d'Informations), options cyber et k8s.</p>
-            </div>
-          </div>
       </div>
+
+      <div class="exp fade">
+        <div class="el">
+          <div class="ed">2021 – 2024</div>
+          <span class="badge bw">Alternance</span>
+        </div>
+        <div>
+          <div class="er">Crédit Agricole Technologies &amp; Services - Montpellier</div>
+          <div class="et">Full-Stack Developer - Security Squad</div>
+          <div class="edesc">
+            Lead developer on three internal security tools: an IAM solution with custom API,
+            BFF and front-end layers; a vulnerability remediation tracker built with Spring Boot,
+            Node and Angular; and an AD habilitation manager handling directory communication
+            and rights mapping across the organisation. Set up CI/CD pipelines for all three.
+          </div>
+          <div class="chips">
+            <span class="chip">Lead Dev</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Angular</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">IAM</span>
+            <span class="chip">Active Directory</span>
+            <span class="chip">CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp fade">
+        <div class="el">
+          <div class="ed">2021 – now</div>
+          <span class="badge bc">Competitions</span>
+        </div>
+        <div>
+          <div class="er">HackInProvence · Root-Me · DGSE · DGSI · YesWeHack</div>
+          <div class="et">CTF Competitor &amp; Security Challenges</div>
+          <div class="edesc">
+            Competed in multiple events while in France: DevOps Heroes (Google/CA-GIP
+            hackathon), CYCOM, Devoxx, 404CTF (DGSE), Shutlock (DGSI), COMCYBER,
+            HackademintCTF, SecSea2k24, Root-Me challenges, CA internal CTF (3rd place),
+            two internal coding contests (1st and 11th place). Member of HackInProvence
+            association. Now in Montréal, participating in YesWeHack monthly dojos.
+          </div>
+          <div class="chips">
+            <span class="chip">CTF</span>
+            <span class="chip">YesWeHack dojos</span>
+            <span class="chip">3rd - CA CTF</span>
+            <span class="chip">HackInProvence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp fade">
+        <div class="el">
+          <div class="ed">Jan – Feb 2021</div>
+          <span class="badge bi">Internship</span>
+        </div>
+        <div>
+          <div class="er">PriceComparator - Montpellier</div>
+          <div class="et">DevOps Intern</div>
+          <div class="edesc">
+            Web scraping with Puppeteer, REST API in Scala/Play, CI/CD setup with Docker
+            and Jenkins.
+          </div>
+          <div class="chips">
+            <span class="chip">Scala</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Jenkins</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="w" id="certs">
+    <div class="sh fade">
+      <span class="sn">03</span>
+      <h2 class="st">Certifications &amp; Education</h2>
+      <div class="sl"></div>
+    </div>
+    <div class="cert-list fade">
+      <div class="cert">
+        <div class="cy">2026</div>
+        <div class="cb"><div class="cn">Certified AppSec Pentester (CAPen)</div><div class="cf">The SecOps Group</div></div>
+        <span class="pill pwip">In progress</span>
+      </div>
+      <div class="cert">
+        <div class="cy">2026</div>
+        <div class="cb"><div class="cn">Certified Network Security Practitioner (CNSP)</div><div class="cf">The SecOps Group</div></div>
+        <span class="pill pwip">In progress</span>
+      </div>
+      <div class="cert">
+        <div class="cy">2024</div>
+        <div class="cb"><div class="cn">Certified AppSec Practitioner (CAP)</div><div class="cf">The SecOps Group</div></div>
+        <span class="pill pok">Certified</span>
+      </div>
+      <div class="cert">
+        <div class="cy">2024</div>
+        <div class="cb">
+          <div class="cn">Expert en Informatique et SI - Cyber &amp; Kubernetes</div>
+          <div class="cf">EPSI Montpellier - Master's equivalent</div>
+        </div>
+        <span class="pill pok">Obtained</span>
+      </div>
+      <div class="cert">
+        <div class="cy">2022</div>
+        <div class="cb"><div class="cn">Bachelor - Application Developer Designer</div><div class="cf">EPSI Montpellier</div></div>
+        <span class="pill pok">Obtained</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="contact">
+    <div class="contact-section fade">
+      <div>
+        <h2>Find me here.</h2>
+        <p>A question, a project idea, or just a chat - always happy to connect.</p>
+      </div>
+      <div class="clinks">
+        <a href="mailto:mathis.allen.pro@gmail.com" class="clink">
+          <div><div class="clbl">Email</div>mathis.allen.pro@gmail.com</div>
+          <span class="carr">→</span>
+        </a>
+        <a href="https://github.com/Man344" class="clink" target="_blank" rel="noopener">
+          <div><div class="clbl">GitHub</div>github.com/Man344</div>
+          <span class="carr">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mathis-allen-400497194" class="clink" target="_blank" rel="noopener">
+          <div><div class="clbl">LinkedIn</div>Mathis Allen</div>
+          <span class="carr">↗</span>
+        </a>
+      </div>
+    </div>
   </div>
-</section>
-<section class="footer">
-  <p id="Copyright ALLEN Mathis">&copy <script>document.write( new Date().getUTCFullYear() );</script> ALLEN Mathis</p>
-</section>
 
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <footer>
+    <p>© <script>document.write(new Date().getFullYear())</script> Mathis Allen</p>
+    <p>Montréal, QC</p>
+  </footer>
 
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js" charset="utf-8"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
