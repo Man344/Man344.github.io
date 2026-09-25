@@ -1,0 +1,652 @@
+/* ============================================================
+   Photographe — Feuille de style
+   Esthétique argentique : gris chauds, grain, texture
+   Palette :
+     --bg        #1c1a18  (gris très foncé, légèrement chaud)
+     --bg-mid    #252220  (cartes, zones intermédiaires)
+     --bg-light  #2e2b28  (hover, borders visibles)
+     --border    #3a3632  (séparateurs)
+     --text      #d4cfc9  (texte principal, blanc cassé chaud)
+     --text-2    #9a948d  (texte secondaire)
+     --text-3    #5c5751  (texte tertiaire, discret)
+     --accent    #e8e0d5  (titres, éléments mis en avant)
+     --grain     url(#grain) — SVG filter inline
+   ============================================================ */
+
+:root {
+  --bg:          #1c1a18;
+  --bg-mid:      #252220;
+  --bg-light:    #2e2b28;
+  --border:      #3a3632;
+  --text:        #d4cfc9;
+  --text-2:      #9a948d;
+  --text-3:      #5c5751;
+  --accent:      #e8e0d5;
+  --accent-dim:  #b8b0a5;
+  --header-h:    64px;
+  --transition:  0.35s ease;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+  /* Grain global via pseudo-élément sur body */
+  position: relative;
+}
+
+/* Grain argentique — calque fixe superposé à tout */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+img { display: block; max-width: 100%; }
+a   { color: inherit; text-decoration: none; }
+
+/* ---- Header ---- */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: rgba(28, 26, 24, 0.93);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  z-index: 900;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: auto;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.site-name { flex: 1; }
+
+.site-name h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.site-tagline {
+  font-size: 0.63rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 3px;
+}
+
+nav { display: flex; gap: 0.15rem; }
+
+nav a {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: color var(--transition);
+  border-bottom: 1px solid transparent;
+  position: relative;
+}
+
+nav a:hover { color: var(--text-2); }
+
+nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent-dim);
+}
+
+/* Burger mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-2);
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* ---- Sections ---- */
+section {
+  display: none;
+  min-height: calc(100vh - var(--header-h));
+  padding: calc(var(--header-h) + 3.5rem) 2rem 5rem;
+  max-width: 1400px;
+  margin: auto;
+  animation: fadeIn 0.45s ease;
+}
+
+section.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-header { margin-bottom: 3rem; }
+
+.section-header h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  /* Légère ombre de profondeur */
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--text-3);
+  margin-top: 0.75rem;
+}
+
+.section-intro {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-3);
+  letter-spacing: 0.1em;
+  font-style: italic;
+}
+
+/* ---- Intro galerie ---- */
+.galerie-intro {
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+}
+
+.galerie-intro p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+/* ---- Galerie masonry ---- */
+.gallery-grid {
+  columns: 3 300px;
+  column-gap: 3px;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 3px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg-mid);
+  /* Légère teinte sépia sur les images au repos */
+  filter: contrast(1.02) brightness(0.92);
+  transition: filter var(--transition);
+}
+
+.gallery-item:hover {
+  filter: contrast(1.05) brightness(1);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  /* Force le GPU dès le chargement — évite la re-rasterisation au hover
+     qui cause "Image corrupt or truncated" sur les grandes images dans Chrome */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.6s ease;
+  filter: saturate(0.7) sepia(0.12);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.035) translateZ(0);
+  filter: saturate(0.85) sepia(0.06);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 18, 16, 0.82) 0%,
+    rgba(20, 18, 16, 0.15) 45%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem 1.25rem;
+}
+
+.gallery-item:hover .gallery-item-overlay { opacity: 1; }
+
+.gallery-item-titre {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+
+.gallery-item-categorie {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-top: 3px;
+}
+
+/* ---- Artiste ---- */
+.artiste-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.artiste-portrait {
+  position: sticky;
+  top: calc(var(--header-h) + 2rem);
+}
+
+.artiste-portrait img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  /* Traitement argentique sur le portrait */
+  filter: saturate(0.5) sepia(0.18) contrast(1.08);
+  transition: filter 0.5s ease;
+}
+
+.artiste-portrait img:hover {
+  filter: saturate(0.7) sepia(0.08) contrast(1.04);
+}
+
+.artiste-texte h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.03em;
+}
+
+.artiste-sous-titre {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.artiste-texte p {
+  color: var(--text-2);
+  font-size: 0.93rem;
+  line-height: 1.95;
+  margin-bottom: 1.4rem;
+}
+
+/* ---- Prestations ---- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.service-card {
+  background: var(--bg-mid);
+  padding: 2.5rem 2rem;
+  transition: background var(--transition);
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px;
+  height: 0;
+  background: var(--text-3);
+  transition: height 0.4s ease;
+}
+
+.service-card:hover { background: var(--bg-light); }
+.service-card:hover::before { height: 100%; }
+
+.service-icon {
+  font-size: 1rem;
+  color: var(--text-3);
+  margin-bottom: 1.4rem;
+}
+
+.service-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.service-card p {
+  font-size: 0.83rem;
+  color: var(--text-2);
+  line-height: 1.85;
+}
+
+/* ---- Contact ---- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.92rem;
+}
+
+.contact-item i {
+  width: 16px;
+  text-align: center;
+  color: var(--text-3);
+  font-size: 0.82rem;
+}
+
+.contact-item a {
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: all var(--transition);
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--text-3);
+}
+
+.contact-item span { color: var(--text-2); }
+
+.contact-reseaux {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.reseau-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-3);
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+
+.reseau-btn:hover {
+  border-color: var(--text-2);
+  color: var(--accent);
+  background: var(--bg-light);
+}
+
+.contact-citation {
+  border-left: 1px solid var(--border);
+  padding-left: 3.5rem;
+}
+
+blockquote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-weight: 300;
+  color: var(--accent-dim);
+  line-height: 1.65;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 1.75rem;
+  font-size: 0.7rem;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--accent-dim);
+}
+
+.footer-sep { margin: 0 0.75rem; color: var(--text-3); }
+footer p   { color: var(--text-3); font-size: 0.78rem; }
+.footer-copy { margin-top: 0.5rem; font-size: 0.7rem; }
+
+/* ---- Lightbox ---- */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  /* Fond légèrement chaud, pas noir pur */
+  background: rgba(18, 16, 14, 0.97);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+
+.lightbox-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  grid-template-rows: auto 1fr;
+  width: min(95vw, 1300px);
+  height: min(90vh, 900px);
+  position: relative;
+  /* Légère bordure pour définir le cadre */
+  outline: 1px solid var(--border);
+}
+
+/* Boutons nav */
+.lb-close,
+.lb-prev,
+.lb-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--text-3);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color var(--transition);
+  z-index: 10;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-close:hover,
+.lb-prev:hover,
+.lb-next:hover { color: var(--accent); }
+
+.lb-close { top: -52px; right: 0; font-size: 1.2rem; }
+
+.lb-prev, .lb-next {
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(18, 16, 14, 0.5);
+  border-radius: 1px;
+}
+
+.lb-prev { left: -52px; }
+.lb-next { right: 0; top: 50%; }
+.lb-nav-hidden { opacity: 0; pointer-events: none; }
+
+/* Zone image */
+.lb-image-wrap {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0e0c0a;
+}
+
+.lb-image-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  /* Traitement argentique dans la lightbox aussi */
+  filter: saturate(0.65) sepia(0.1) contrast(1.04);
+}
+
+/* Zone info */
+.lb-info {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  padding: 2.5rem 2rem;
+  border-left: 1px solid var(--border);
+  background: var(--bg-mid);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+}
+
+.lb-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lb-counter {
+  font-size: 0.68rem;
+  color: var(--text-3);
+  letter-spacing: 0.12em;
+}
+
+.lb-categorie {
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  padding: 0.18rem 0.55rem;
+  border-radius: 1px;
+}
+
+.lb-info h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.55rem;
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+.lb-info p {
+  font-size: 0.83rem;
+  color: var(--text-2);
+  line-height: 1.85;
+}
+
+.lb-exif {
+  margin-top: auto !important;
+  font-size: 0.69rem !important;
+  color: var(--text-3) !important;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.06em;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  line-height: 1.6 !important;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .artiste-layout       { grid-template-columns: 1fr; gap: 2.5rem; }
+  .artiste-portrait     { position: static; max-width: 320px; }
+  .contact-layout       { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-citation     { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 2.5rem; }
+  .lightbox-inner       { grid-template-columns: 1fr; grid-template-rows: 1fr auto; height: min(95vh, 900px); }
+  .lb-image-wrap        { grid-column: 1; grid-row: 1; max-height: 60vh; }
+  .lb-info              { grid-column: 1; grid-row: 2; border-left: none; border-top: 1px solid var(--border); padding: 1.25rem 1rem; max-height: 35vh; }
+  .lb-prev              { left: 8px; }
+  .lb-next              { right: 8px; }
+}
+
+@media (max-width: 768px) {
+  nav                   { display: none; flex-direction: column; position: absolute; top: var(--header-h); left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1rem 0; }
+  nav.open              { display: flex; }
+  nav a                 { padding: 0.75rem 2rem; width: 100%; }
+  .nav-toggle           { display: flex; }
+  .header-inner         { padding: 0 1.25rem; }
+  section               { padding: calc(var(--header-h) + 2rem) 1rem 3rem; }
+  .gallery-grid         { columns: 2 150px; }
+  .lb-close             { top: 8px; right: 8px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid         { columns: 1; }
+  .services-grid        { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jean Dupont — Photographe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&family=Spectral:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Défini tôt pour les onerror= dans le HTML -->
+  <script>
+    var PLACEHOLDER_SVG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23111111' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='14' font-family='sans-serif' fill='%23444444'%3EImage non disponible%3C/text%3E%3C/svg%3E";
+  </script>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="header-inner">
+    <div class="site-name">
+      <h1>Jean Dupont</h1>
+      <p class="site-tagline">Photographe</p>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav id="main-nav">
+      <a onclick="showSection('galerie')"  data-section="galerie"  class="active">Galerie</a>
+      <a onclick="showSection('artiste')"  data-section="artiste">L'artiste</a>
+      <a onclick="showSection('services')" data-section="services">Prestations</a>
+      <a onclick="showSection('contact')"  data-section="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== GALERIE ===================== -->
+<section id="galerie" class="active">
+  <div class="section-header">
+    <h2>Galerie</h2>
+  </div>
+
+  <div class="galerie-intro">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+  </div>
+
+  <!-- Les cartes sont générées automatiquement depuis data/photos.js -->
+  <div class="gallery-grid" id="gallery-grid"></div>
+</section>
+
+<!-- ===================== ARTISTE ===================== -->
+<section id="artiste">
+  <div class="section-header">
+    <h2>L'artiste</h2>
+  </div>
+  <div class="artiste-layout">
+    <div class="artiste-portrait">
+      <img src="images/portrait/portrait1.jpg" alt="Jean Dupont, photographe"
+           onerror="this.src=PLACEHOLDER_SVG">
+    </div>
+    <div class="artiste-texte">
+      <!-- ================================================
+           TEXTE DE PRÉSENTATION — à modifier librement
+           ================================================ -->
+      <h3>Jean Dupont</h3>
+      <p class="artiste-sous-titre">Photographe de paysages & portraits</p>
+      <p>
+        Originaire de Lyon, Jean Dupont explore depuis plus de quinze ans la lumière
+        et ses silences. Son travail navigue entre le documentaire et l'intime,
+        cherchant dans chaque cadre l'instant suspendu qui révèle une vérité.
+      </p>
+      <p>
+        Formé à l'École Nationale Supérieure Louis-Lumière, il a exposé en France,
+        en Italie et au Japon. Ses photographies font partie de collections privées
+        et institutionnelles en Europe.
+      </p>
+      <p>
+        Disponible pour des commandes personnelles, éditoriales et artistiques.
+      </p>
+      <!-- ================================================ -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRESTATIONS ===================== -->
+<section id="services">
+  <div class="section-header">
+    <h2>Prestations</h2>
+    <p class="section-intro">Chaque projet est unique — contactez-moi pour un devis personnalisé</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+      <h3>Portrait</h3>
+      <p>Séances portrait en studio ou en extérieur. Particuliers, artistes, professionnels. Retouche incluse.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-ring" aria-hidden="true"></i></div>
+      <h3>Mariage</h3>
+      <p>Reportage complet de votre journée, de la préparation à la soirée. Galerie en ligne incluse.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+      <h3>Corporate</h3>
+      <p>Photos d'entreprise, reportages événementiels, portraits équipe pour vos supports de communication.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i></div>
+      <h3>Paysage & Architecture</h3>
+      <p>Commandes artistiques, immobilier, tourisme. Travail en lumière naturelle ou éclairage maîtrisé.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="section-header">
+    <h2>Contact</h2>
+    <p class="section-intro">Pour tout projet ou renseignement</p>
+  </div>
+  <div class="contact-layout">
+
+    <div class="contact-bloc">
+      <!-- ================================================
+           COORDONNÉES — à modifier
+           ================================================ -->
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:jean.dupont@email.com">jean.dupont@email.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <a href="tel:+33612345678">06 12 34 56 78</a>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <span>Lyon, France — déplacements possibles</span>
+      </div>
+      <!-- ================================================ -->
+
+      <div class="contact-reseaux">
+        <!-- ================================================
+             RÉSEAUX SOCIAUX — remplacez les # par vos URLs
+             Supprimez les lignes dont vous n'avez pas besoin
+             ================================================ -->
+        <a href="#" class="reseau-btn" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="reseau-btn" aria-label="Facebook">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="reseau-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <!-- ================================================ -->
+      </div>
+    </div>
+
+    <div class="contact-citation">
+      <blockquote>
+        &ldquo;&thinsp;La photographie, c'est l'art de fixer<br>ce qui est en train de disparaître.&thinsp;&rdquo;
+        <cite>— Henri Cartier-Bresson</cite>
+      </blockquote>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <p>
+    <span class="footer-name">Jean Dupont</span>
+    <span class="footer-sep">&mdash;</span>
+    Photographe
+  </p>
+  <p class="footer-copy">&copy; <span id="footer-year"></span> Tous droits réservés</p>
+</footer>
+
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOverlay(event)">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+
+    <button class="lb-close"  onclick="closeAllLightboxes()" aria-label="Fermer">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lb-prev" onclick="lbNav(-1)" aria-label="Précédent">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="lb-next" onclick="lbNav(1)"  aria-label="Suivant">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="lb-image-wrap">
+      <img id="lb-img" src="" alt="">
+    </div>
+
+    <div class="lb-info">
+      <div class="lb-meta">
+        <span class="lb-counter" id="lb-counter"></span>
+        <span class="lb-categorie" id="lb-categorie"></span>
+      </div>
+      <h3 id="lb-titre"></h3>
+      <p  id="lb-description"></p>
+      <p  id="lb-exif" class="lb-exif"></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="data/photos.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
